@@ -1,0 +1,17 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bhknjizevniciapp.Views.SearchPage"
+             Title="Search">
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar x:Name="SearchBar" Placeholder="Pretraži književnike" SearchButtonPressed="OnSearchButtonClicked" />
+            <ListView x:Name="KnjizevniciListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

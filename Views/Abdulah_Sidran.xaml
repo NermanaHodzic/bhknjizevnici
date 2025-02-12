@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+    <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="bhknjizevniciapp.Views.Abdulah_Sidran"
+             Title=" Abdulah Sidran">
+
+    <ContentPage.Resources>
+        <Style x:Key="PlayBorderStyle" TargetType="Border">
+            <Setter Property="BackgroundColor" Value="White"/>
+            <Setter Property="Stroke" Value="White"/>
+            <Setter Property="HeightRequest" Value="42"/>
+            <Setter Property="WidthRequest" Value="42"/>
+            <Setter Property="Margin" Value="0,0,6,0"/>
+        </Style>
+
+        <Style x:Key="PlayIconStyle" TargetType="Path">
+            <Setter Property="Fill" Value="Black"/>
+            <Setter Property="Scale" Value="0.5"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="Data" Value="M0,0 L0,32 24,16z"/>
+        </Style>
+
+        <Style x:Key="MyMediaElementStyle" TargetType="toolkit:MediaElement">
+            <Setter Property="WidthRequest" Value="80" />
+            <Setter Property="HeightRequest" Value="80" />
+        </Style>
+
+    </ContentPage.Resources>
+
+
+    <ScrollView>
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+                <Image Source="abdulah_sidran.jpg" Aspect="AspectFit" HeightRequest="300" Margin="0,10,0,10" />
+
+            <Label Text="Abdulah Sidran" FontFamily="LobsterTwoItalic" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+
+                <Label Text="Abdulah Sidran je istaknuti bosanskohercegovački književnik, scenarist i pjesnik. Rođen je 9. aprila 1944. godine u Sarajevu, BiH. Sidran je poznat po svom bogatom književnom opusu i angažiranim djelima koja su oblikovala kulturnu scenu Bosne i Hercegovine. Njegova poezija i proza često se dotiču tematike ratnih trauma i socijalnih promjena. Abdulah Sidran je također poznat kao autor scenarija za neke od najpoznatijih jugoslavenskih filmova."
+                   FontSize="16" FontFamily="DancingScriptSemiBold" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="10,10,10,10" />
+
+            <Label Text="Poezija:"  FontFamily="LobsterTwoItalic" FontSize="16" FontAttributes="Bold" HorizontalOptions="Start" Margin="0,10,0,10" />
+
+                <StackLayout Margin="0,0,0,20">
+                <Label Text="- Šahbaza (Sarajevo, 1970.)"   FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Kost i meso (Sarajevo, 1976.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Bolest od duše (Nikšić, 1988.)" FontFamily="DancingScriptSemiBold"  FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Sarajevska zbirka (Sarajevo, 1991.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Sarajevski tabut (Sarajevo, 1994.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Dvije grafike, dvije pjesme, poetsko – likovna mapa, (s Safetom Zecom) (Udine, 1994.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Planeta Sarajevo (Stockholm, 1995.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Zašto tone Venecija (Sarajevo, 1996.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Sarajevska zbirka i druge pjesme (Sarajevo, 1997.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Pjesme (Tuzla, 2004.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Izabrane pjesme (Beograd, 2007.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Dobročinitelj (s Mersadom Berberom) (Sarajevo, 2008.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Suze majki Srebrenice: 11. juli 2007. (Sarajevo, 2009.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                    
+             <Label Text="Romani i publicistika:"  FontFamily="LobsterTwoItalic" FontSize="16" FontAttributes="Bold" HorizontalOptions="Start" Margin="0,10,0,10" />
+                <Label Text="- Potukač (Zagreb, 1971.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Sjećaš li se Dolly Bell (Sarajevo, 1982.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Otkup sirove kože (Beograd, 2011.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Oranje mora (Sarajevo, 2015.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- A Nurija veli (Sarajevo, 2022.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                    
+            <Label Text="Drame i putopisi:"  FontFamily="LobsterTwoItalic" FontSize="16" FontAttributes="Bold" HorizontalOptions="Start" Margin="0,10,0,10" />
+                <Label Text="- Otac na službenom putu (Sarajevo, 1983.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="-Zdravo Bosno, stižem iz Sarajeva (Tuzla, 1996.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- U Zvorniku ja sam ostavio svoje srce (Tuzla, 2002.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Drama, putopisi (Tuzla, 2004.)" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+
+             <Label Text="Nagrade i priznanja:"  FontFamily="LobsterTwoItalic" FontSize="16" FontAttributes="Bold" HorizontalOptions="Start" Margin="0,10,0,10" />
+                <Label Text="- Godišnja nagrada Udruženja književnika BiH, 1979." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="-Godišnja nagrada izdavačkog preduzeća Svjetlost, 1979." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Zmajeva nagrada – Matica srpska, Novi Sad, 1980." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Nagrada Skender Kulenović, 2002." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Godišnja nagrada BZK Preporod, 2002." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Nagrada Skender Kulenović, 2002." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Nagrada Skender Kulenović, 2002." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+
+                <Label Text="- Velika Plaketa Kantona Sarajevo, 2006." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+
+                <Label Text="- Nagrada 25. novembar, Sarajevo (2018)." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+
+                <Label Text="- Nagrada za slobodu govora i izražavanja Fondacije za slobodu govora i izražavanja, USA, 1993." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+
+                <Label Text="- Nagrada Slobode PEN – centra Francuske, 1994." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+
+                <Label Text="-Premio letterario 1996. della Fondazione Laboratorio Mediterraneo" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+
+    
+
+
+                <Label Text="Poslušajte pjesmu Bašeskija:"  FontFamily="LobsterTwoItalic"  FontSize="16" FontAttributes="Bold" HorizontalOptions="Start" Margin="0,10,0,10" />
+
+                <Label FontFamily="DancingScriptSemiBold" Text="Jutros je, usred ljeta, snijeg pao, težak i mokar. Plaču zaprepaštene bašte. Bilježim to i šutim, jer svikao sam na čuda. Vidim, kroz okna dućanska, zabrinuta prolaze lica..."
+                   FontSize="16" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="10,10,10,10" />
+
+                <Grid
+                    Grid.ColumnSpan="2"
+                    Grid.Row="2"
+                    ColumnDefinitions="Auto,*"
+                    VerticalOptions="End"
+                    Margin="12">
+
+                    <Border x:Name="playBorder"
+                        Style="{StaticResource PlayBorderStyle}"
+                             BackgroundColor="LightGray"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                            Padding="5,5,5,5"
+                             IsEnabled="True"
+                             IsVisible="True"
+                             Opacity="1"
+                             
+                             >
+                        <Border.StrokeShape>
+                            <Ellipse/>
+                        </Border.StrokeShape>
+                        <Path
+                            Data="M0,0L15.825011,8.0009766 31.650999,15.997986 15.825011,23.998993 0,32 0,15.997986z"
+                            Style="{StaticResource PlayIconStyle}"/>
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnPlayButtonTapped"/>
+                        </Border.GestureRecognizers>
+                    </Border>
+                </Grid>
+                <toolkit:MediaElement x:Name="mediaElement" 
+                          WidthRequest="310" 
+                          HeightRequest="40" 
+                          BackgroundColor="AliceBlue"
+                          Source="embed://beseskija.wav"
+                          VerticalOptions="CenterAndExpand"
+                          HorizontalOptions="CenterAndExpand"
+                          IsVisible="False"
+                          MediaEnded="OnMediaEnded"
+                          />
+
+            </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="bhknjizevniciapp.Views.Dževad_Karahasan"
+             Title="Dževad Karahasan">
+
+    <ContentPage.Resources>
+        <Style x:Key="PlayBorderStyle" TargetType="Border">
+            <Setter Property="BackgroundColor" Value="White"/>
+            <Setter Property="Stroke" Value="White"/>
+            <Setter Property="HeightRequest" Value="42"/>
+            <Setter Property="WidthRequest" Value="42"/>
+            <Setter Property="Margin" Value="0,0,6,0"/>
+        </Style>
+
+        <Style x:Key="PlayIconStyle" TargetType="Path">
+            <Setter Property="Fill" Value="Black"/>
+            <Setter Property="Scale" Value="0.5"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="Data" Value="M0,0 L0,32 24,16z"/>
+        </Style>
+
+        <Style x:Key="MyMediaElementStyle" TargetType="toolkit:MediaElement">
+            <Setter Property="WidthRequest" Value="80" />
+            <Setter Property="HeightRequest" Value="80" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+            <Image Source="dzevad_karahasan.jpg" Aspect="AspectFit" HeightRequest="300" Margin="0,10,0,10" />
+
+            <Label Text="Dževad Karahasan" FontFamily="LobsterTwoItalic" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <Label Text="Dževad Karahasan je poznati bosanskohercegovački pisac, romanopisac, esejista i dramatičar. Rođen je 26. januara 1953. godine u Duvnu, Bosna i Hercegovina. Karahasan je autor nagrađivanih romana, drama i eseja koji se bave temama identiteta, povijesti i politike. Njegova djela su prevođena na mnoge jezike i stekla su međunarodno priznanje. Dževad Karahasan je također poznat kao intelektualac i aktivni član kulturne scene." 
+                   FontSize="16" FontFamily="DancingScriptSemiBold" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="10,10,10,10" />
+
+            <Label Text="Neka od njegovih književnih djela su:"  FontFamily="LobsterTwoItalic" FontSize="16" FontAttributes="Bold" HorizontalOptions="Start" Margin="0,10,0,10" />
+
+            <StackLayout Margin="0,0,0,20">
+                <Label Text="-Kazalište i kritika, 'Svjetlost', Sarajevo, 1980."   FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Kraljevske legende, 'Veselin Masleša', Sarajevo, 1980." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="-Kralju ipak ne sviđa se gluma, Sarajevo, 1983." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Strašno je vani, Sarajevo, 1984." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- O jeziku i strahu, Sarajevo, 1987." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Model u dramaturgiji, Omladinski centar Zagreb, Zagreb, 1988." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Istočni divan, 'Svjetlost', Sarajevo, 1989." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Východný díwán, 'Kalligram', Bratislava, 2007." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Misionari, 'Svjetlost', Sarajevo, 1989." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Stidna žitija, 'Bratstvo-Jedinstvo', Novi Sad, 1989." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Stid nedjeljom, 'August Cesarec', Zagreb, 1991." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Kuća za umorne, 'August Cesare', Zagreb, 1993." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Dnevnik selidbe, 'Duriex', Zagreb, 1993." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="-Loučení se Sarajevem, 'Mladá fronta', Prag, 1995." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Al-Mukaffa, ARBOS, Klagenfurt-Salzburg-Beč, 1994." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Povučeni anđeo, ARBOS, Klagenfurt-Salzburg-Beč, 1995." FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

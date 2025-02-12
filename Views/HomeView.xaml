@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="bhknjizevniciapp.Views.HomeView"
+             xmlns:viewmodels="clr-namespace:bhknjizevniciapp.ViewModels"
+             xmlns:templates="clr-namespace:bhknjizevniciapp.Views.Templates"
+             Title="BH knjizevnici"
+             BackgroundColor="LightGrey">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="SectionContainerStyle" TargetType="Grid">
+                <Setter Property="Margin" Value="24, 6"/>
+            </Style>
+
+            <Style x:Key="TitleTextStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <viewmodels:HomeViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="Auto,Auto,*">
+        <!--HEADER-->
+        <Grid ColumnDefinitions="Auto,*,Auto" Style="{StaticResource SectionContainerStyle}">
+            <!-- ListView za prikazivanje liste autora -->
+            <ListView x:Name="KnjizevniciListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding Image}" HeightRequest="50" WidthRequest="50" Aspect="AspectFill" Margin="10"/>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Grid Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="BH književnici..." FontFamily="DancingScriptSemiBold" Style="{StaticResource TitleTextStyle}" />
+                    <Image Source="pero.png" HeightRequest="30" WidthRequest="30" />
+                </StackLayout>
+            </Grid>
+
+            <Grid Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" >
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnSearchTapped" />
+                </Grid.GestureRecognizers>
+                <Image Source="search_icon.png" HeightRequest="20" WidthRequest="20">
+                </Image>
+            </Grid>
+        </Grid>
+
+
+        <!--ŽANR-->
+        <Grid Grid.Row="2" Style="{StaticResource SectionContainerStyle}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="Odaberite žanr" VerticalOptions="Center" FontFamily="CormorantGaramord"/>
+                <Image Source="hand.png" VerticalOptions="Center" WidthRequest="17" HeightRequest="17" />
+            </StackLayout>
+            <Picker x:Name="GenrePicker" SelectedIndexChanged="GenrePicker_SelectedIndexChanged">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Autobiografija</x:String>
+                        <x:String>Esej</x:String>
+                        <x:String>Drama</x:String>
+                        <x:String>Novela</x:String>
+                        <x:String>Poezija</x:String>
+                        <x:String>Pripovijetke</x:String>
+                        <x:String>Psihologija</x:String>
+                        <x:String>Romani</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <CollectionView
+            Grid.Row="1"
+            ItemsSource="{Binding Posts}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout
+                    Orientation="Vertical"
+                    ItemSpacing="38"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <templates:PostItemTemplate/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="bhknjizevniciapp.Views.Mak_Dizdar"
+             Title="Mak Dizdar">
+
+    <ContentPage.Resources>
+        <Style x:Key="PlayBorderStyle" TargetType="Border">
+            <Setter Property="BackgroundColor" Value="White"/>
+            <Setter Property="Stroke" Value="White"/>
+            <Setter Property="HeightRequest" Value="42"/>
+            <Setter Property="WidthRequest" Value="42"/>
+            <Setter Property="Margin" Value="0,0,6,0"/>
+        </Style>
+
+        <Style x:Key="PlayIconStyle" TargetType="Path">
+            <Setter Property="Fill" Value="Black"/>
+            <Setter Property="Scale" Value="0.5"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="Data" Value="M0,0 L0,32 24,16z"/>
+        </Style>
+
+        <Style x:Key="MyMediaElementStyle" TargetType="toolkit:MediaElement">
+            <Setter Property="WidthRequest" Value="80" />
+            <Setter Property="HeightRequest" Value="80" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+            <Image Source="mak_dizdar.jpg" Aspect="AspectFit" HeightRequest="300" Margin="0,10,0,10" />
+
+            <Label Text="Mak Dizdar" FontFamily="LobsterTwoItalic" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <Label Text="Mak Dizdar je poznati bosanskohercegovački pjesnik i književnik. Rođen je 17. oktobra 1917. godine u Stocu, Bosna i Hercegovina. Dizdar je jedan od najznačajnijih autora bosanskog jezika, poznat po svojoj dubokoj lirskoj poeziji. Njegova djela se često bave temama kao što su bosanska kultura, povijest, identitet i filozofija. Mak Dizdar je ostavio trajni uticaj na književnost i kulturu Bosne i Hercegovine." 
+                   FontSize="16" FontFamily="DancingScriptSemiBold" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Margin="10,10,10,10" />
+
+            <Label Text="Neka od njegovih književnih djela su:"  FontFamily="LobsterTwoItalic" FontSize="16" FontAttributes="Bold" HorizontalOptions="Start" Margin="0,10,0,10" />
+
+            <StackLayout Margin="0,0,0,20">
+                <Label Text="- Kameni spavač"   FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Modra rijeka"   FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Blago" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Izabrane pjesme" FontFamily="DancingScriptSemiBold"  FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Povratak" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Stari zavičaj" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Moje pjesme, moji snovi" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Vizioni" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Sarajevska trilogija" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Bosanske elegije" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+                <Label Text="- Izabrane pjesme - Bakreni i srebrni" FontFamily="DancingScriptSemiBold" FontSize="16" Margin="0,5,0,5" HorizontalOptions="StartAndExpand" />
+
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

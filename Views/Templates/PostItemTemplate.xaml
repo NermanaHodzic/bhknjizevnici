@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="bhknjizevniciapp.Views.Templates.PostItemTemplate">
+    <ContentView.Resources>
+        <ResourceDictionary>
+
+            <Style x:Key="PostBorderStyle" TargetType="Border">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="StrokeThickness" Value="0"/>
+                <Setter Property="HeightRequest" Value="240"/>
+            </Style>
+
+            <Style x:Key="PostImageStyle" TargetType="Image">
+                <Setter Property="Aspect" Value="AspectFill"/>
+            </Style>
+            <Style x:Key="AuthorBorderStyle" TargetType="Border">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="StrokeThickness" Value="4"/>
+                <Setter Property="Stroke" Value="{Binding Author.Color}"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="HeightRequest" Value="60"/>
+                <Setter Property="WidthRequest" Value="60"/>
+                <Setter Property="Margin" Value="12"/>
+            </Style>
+
+            <Style x:Key="AuthorNameTextStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="white"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontFamily" Value="DancingScriptSemiBold"/>
+                <Setter Property="FontSize" Value="24"/>
+            </Style>
+
+            <Style x:Key="InfoLayoutStyle" TargetType="Grid">
+                <Setter Property="Margin" Value="12,0"/>
+            </Style>
+
+            <Style x:Key="HeartIconStyle" TargetType="Path">
+                <Setter Property="Fill" Value="White"/>
+                <Setter Property="Scale" Value="1.0"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HeightRequest" Value="80"/>
+                <Setter Property="WidthRequest" Value="80"/>
+            </Style>
+
+
+            <Style x:Key="PlayBorderStyle" TargetType="Border">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="Stroke" Value="White"/>
+                <Setter Property="HeightRequest" Value="42"/>
+                <Setter Property="WidthRequest" Value="42"/>
+                <Setter Property="Margin" Value="0,0,6,0"/>
+            </Style>
+
+            <Style x:Key="PlayIconStyle" TargetType="Path">
+                <Setter Property="Fill" Value="Black"/>
+                <Setter Property="Scale" Value="0.5"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="Data" Value="M0,0 L0,32 24,16z"/>
+            </Style>
+
+
+            <Style x:Key="MyMediaElementStyle" TargetType="toolkit:MediaElement">
+                <Setter Property="WidthRequest" Value="80" />
+                <Setter Property="HeightRequest" Value="80" />
+            </Style>
+
+
+
+
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <Border
+        Style="{StaticResource PostBorderStyle}">
+        <Border.StrokeShape>
+            <RoundRectangle
+                CornerRadius="12,120,12,12"/>
+        </Border.StrokeShape>
+        <Border.Shadow>
+            <Shadow
+                        Opacity="0.25"/>
+        </Border.Shadow>
+        <Grid>
+            <Image
+              
+                Source="{Binding Image}"
+                        Style="{StaticResource PostImageStyle}"/>
+            
+            <Grid
+                        BackgroundColor="Black"
+                        Opacity="0.1"/>
+            <Grid
+                        ColumnDefinitions="80,Auto"
+                        RowDefinitions="Auto,Auto,*">
+                <Border
+                            Style="{StaticResource AuthorBorderStyle}">
+                    <Border.StrokeShape>
+                        <Ellipse/>
+                    </Border.StrokeShape>
+                    <Image
+                                Source="{Binding Author.Image}"/>
+                </Border>
+                <Grid
+                            Grid.Column="1"
+                            RowDefinitions="Auto,Auto"
+                            Margin="0,18">
+                    <Label
+                                Text="{Binding Author.Name}"
+                                Style="{StaticResource AuthorNameTextStyle}"/>
+                    
+                </Grid>
+                <Grid Grid.Row="1" Style="{StaticResource InfoLayoutStyle}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" Text="Otvori" Clicked="Button_Clicked" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="80" BackgroundColor="Grey" FontSize="16" FontFamily="LobsterTwoItalic"/>
+                </Grid>
+
+                <Grid Grid.Row="3" Style="{StaticResource InfoLayoutStyle}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Path x:Name="HeartIcon" Grid.Column="0" Data="M8.5319849,0C11.560988,7.3866431E-08 14.464015,1.6680007 15.99997,4.5209999 18.139016,0.55099538 22.921994,-1.1230173 27.008008,0.7949839 31.297024,2.8069787 33.185032,8.0069957 31.22604,12.411997 29.27303,16.804 15.998994,30.380001 15.998994,30.380001 15.915985,30.327022 2.7269701,16.804 0.77395964,12.411997 -1.1850933,8.0069957 0.70291448,2.8069787 4.9929701,0.7949839 6.1419612,0.25497467 7.3469826,7.3866431E-08 8.5319849,0z"
+          Style="{StaticResource HeartIconStyle}">
+                        <Path.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="HeartIcon_Tapped" />
+                        </Path.GestureRecognizers>
+                    </Path>
+                </Grid>
+
+
+            </Grid>
+        </Grid>
+    </Border>
+</ContentView>
